@@ -99,9 +99,10 @@ order by length (job_id) desc;
 정확하지 않지만, 지사가 있을 것으로 예상되는 나라들을 나라이름을
 대문자로 출력하고 올림차순(ASC)으로 정렬해 보세오.
 */
-select  initcap(country_name)
+select  upper(country_name)
 from countries
 order by country_name asc;
+
 
 /*문제10
 입사일이 03/12/31 일 이전 입사한 직원의 이름, 월급, 전화 번호, 입사일을
