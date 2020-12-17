@@ -40,7 +40,8 @@ select  first_name,
         salary
 from employees
 where salary > 3000
-and commission_pct is null;
+and commission_pct is null
+and manager_id is not null;
 
 
 /*문제4
