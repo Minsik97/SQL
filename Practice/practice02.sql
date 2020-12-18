@@ -109,6 +109,6 @@ select  salary,
              when hire_date <= '03/12/31' then '03년입사'
              when hire_date <= '04/12/30' then '04년입사'
              else '상장이후입사'
-        end 입사일
+        end optDate
 from employees
 order by hire_date asc;
