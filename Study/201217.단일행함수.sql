@@ -55,7 +55,7 @@ from employees;
 --숫자함수 – TRUNC(숫자, 출력을 원하는 자리수) 
 select  trunc(123.456, 2) as r2, --n번째 까지 출력하고 나머진 버림
         trunc(123.456, 0) as r0,
-        trunc(123.456, -1) as "r-1"
+        trunc(124.456, -1) as "r-1"
 from dual;
 
 --날짜함수 – SYSDATE
