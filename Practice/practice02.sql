@@ -94,6 +94,7 @@ select  hire_date,
 from employees
 group by hire_date
 having avg(salary)>=5000
+and hire_date >= '2005/12/31'
 order by avg(salary) desc;
 
 /*문제10
