@@ -156,9 +156,39 @@ and emp.salary > eas.easalary;
 직원 입사일이 11번째에서 15번째의 직원의 사번, 이름, 급여, 입사일을
 입사일 순서로 출력하세요
 */
-select  first_name,
+select  employee_id,
+        first_name,
+        salary,
         hire_date
-from employees
-order by hire_date asc;
+from employees;
 
+select  rownum rn,
+        eh.employee_id,
+        eh.first_name,
+        eh.salary,
+        eh.hire_date
+from (select  employee_id,
+              first_name,
+              salary,
+              hire_date
+      from employees) eh;
+
+select  ro.rn,
+        ro.employee_id,
+        ro.first_name,
+        ro.salary,
+        ro.hire_date
+from (select  rownum rn,
+              eh.employee_id,
+              eh.first_name,
+              eh.salary,
+              eh.hire_date
+      from (select  employee_id,
+                    first_name,
+                    salary,
+                    hire_date
+            from employees) eh
+      ) ro
+where ro.rn >=11
+and ro.rn <=15;
 
